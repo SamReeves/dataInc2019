@@ -3,7 +3,7 @@ library(dplyr)
 library(stringr)
 
 # declare some handy vaiables
-setwd("~/Documents/TDI2019/data")
+setwd("~/Desktop/di/data")
 fileList <- list.files(pattern = "*.json")
 jsonDump <- lapply(fileList, fromJSON)
 dates <- c()
@@ -20,13 +20,17 @@ for (i in 1:length(fileList)) {
 
 jsonDump <- lapply(jsonDump, unlist)
 
-# Replace NULL values with the last real values
+
 for (i in 1:length(jsonDump)) {
-	if (length(unlist(jsonDump[i])) != length(unlist(jsonDump[1]))) {
-		jsonDump[i] <- jsonDump[i-1]
+
+# Convert to str, delete headings
+	rawvector[i] <- toString(jsonDump[i]) %>% substring(92)
+
+# Replace NULL values with the last real values
+	if (jsonDump[i] == "") {
+        jsonDump[i] <- jsonDump[i-1]
 	}
-	# Convert to str, delete headings
-	jsonDump[i] <- toString(jsonDump[i]) %>% substring(92)
+	
 }
 
 
