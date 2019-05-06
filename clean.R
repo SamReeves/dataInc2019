@@ -38,5 +38,11 @@ for (i in 1:length(jsonDump)) {
         sliver <- dataset[i-1]
 	}
 
-dataset <- c(dataset, tbl_df(sliver))
+	dataset <- c(dataset, tbl_df(sliver))
 }
+
+# Transform the data into a list of 38 vectors
+dataset <- do.call("rbind", dataset)
+dataset <- split(dataset, rep(1:ncol(dataset), each = nrow(dataset)))
+names(dataset) <- currencies
+

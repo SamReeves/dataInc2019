@@ -1,5 +1,8 @@
 library(gmp)
 
+# I figure we can represent the number of possible sequences
+# like this  ----->    1 * (k-1)^(n-3) * (k-2) * 1
+
 series <- function (n,k) {
 	k <- as.bigz(k)
 	n <- as.bigz(n)
