@@ -1,4 +1,5 @@
 library(ggplot2)
+library(zoo)
 
 # line graph representing MMK/USD
 x <- c(dates)
@@ -12,3 +13,8 @@ ggplot(plotdata, aes(x, y)) + geom_line() +
 plot(tdi$tdi, type='o', col="blue")
 lines(tdi$di, type='o', pch=22, lty=2, col="red")
 
+# Plot the exchange rates of the entire dataset
+plot.zoo(dataset, plot.type = "single", 
+    col = c("red", "blue", "green", "dark blue",
+	"orange", "black", "brown", "purple", "dark red", 
+	"dark purple", "forest green", "grey"))

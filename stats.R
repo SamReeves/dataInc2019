@@ -10,3 +10,5 @@ roc_usd <- ROC(dataset$USD, n = 1,
 # Creates a long TDI set with each currency end-end-to-end
 tdi <- data.frame(TDI(dataset, n = 20, multiple = 2))
 
+
+
