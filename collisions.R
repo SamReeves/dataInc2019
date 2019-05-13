@@ -80,7 +80,14 @@ sttnalc <- sum(nrow(filter(sttn17, sttn17$CONTRIBUTING.FACTOR.VEHICLE.1 == "Alco
 alc <- c(brnxalc,bklnalc,mntnalc,qunsalc,sttnalc)
 perCap <- pop17 / alc
 
-# Filter 2013 to 2018
+# Filter 2013 to 2018, 
 series <- filter(dump, dump$DATE > "2012-12-31")
+allDates <- data.frame(series$DATE)
+uniqueDates <- unique(series$DATE)
+df <- data.frame(dates = uniqueDates, count = 1)
 
-
+for (i in 1:nrow(allDates)) {
+	if (allDates[i] == allDates[i-1]) {
+		df$count <- df$count + 1
+	}
+}
