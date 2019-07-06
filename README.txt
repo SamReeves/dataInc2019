@@ -1,8 +1,4 @@
--- BACKGROUND --
-I live in Burma.  More than anything else, the value of the US Dollar (USD) compared to the value of the local currency, Myanmar Kyat (MMK), dictates my material possibilities.  As this country does not have effective trade relations with any other nation, and it is illegal to take MMK out of the country, all things must be imported with USD.  For this reason, it is said that the "black" economy is as much as 8 times the size of the formal economy.  For importers and Asian banks, knowledge of the exchange rate is extremely important.
-
--- THE DATA --
-The Central Bank of Myanmar each morning releases the exchange rates on a basis that is perhaps not arbitrary, but is totally unknown.  The mint exists on a military base, and there is no known monetary policy.  As the government cannot effectively levy taxes, the money supply changes will-nilly.  Some people believe that the exchange rates and money supply are the direct product of astrological guidance from high-ranking Buddhist monks.
+TDI CHALLENGE PROJECT
 
 -- THIS PROJECT --
 The historical data is offered generously by the Central Bank of Myanmar on their website.
